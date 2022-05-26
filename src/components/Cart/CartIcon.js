@@ -1,5 +1,4 @@
 import React from "react";
-import cartIcon from "../../assets/cart-icon.png";
 
 const CartIcon = () => {
   return (
