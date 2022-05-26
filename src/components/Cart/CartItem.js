@@ -1,10 +1,10 @@
-import styling from './CartItem.module.css';
+import styling from "./CartItem.module.css";
 
 const CartItem = (props) => {
-  const price = `$${props.price.toFixed(2)}`;
+  const price = `₹${props.price.toFixed(2)}`;
 
   return (
-    <li className={styling['cart-item']}>
+    <li className={styling["cart-item"]}>
       <div>
         <h2>{props.name}</h2>
         <div className={styling.summary}>
