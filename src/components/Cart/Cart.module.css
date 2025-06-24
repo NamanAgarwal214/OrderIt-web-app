@@ -13,6 +13,7 @@
   font-weight: bold;
   font-size: 1.5rem;
   margin: 1rem 0;
+  color: #8a2b06;
 }
 
 .actions {
@@ -24,23 +25,48 @@
   cursor: pointer;
   background-color: transparent;
   border: 1px solid #8a2b06;
+  color: #8a2b06;
   padding: 0.5rem 2rem;
   border-radius: 25px;
   margin-left: 1rem;
+  transition: background 0.2s, color 0.2s, border 0.2s;
 }
 
 .actions button:hover,
 .actions button:active {
-  background-color: #5a1a01;
-  border-color: #5a1a01;
-  color: white;
+  background-color: #8a2b06;
+  border-color: #641e03;
+  color: #f9fafb;
 }
 
 .actions .button--alt {
-  color: #8a2b06;
+  color: #1e293b;
+  border-color: #1e293b;
+}
+
+.actions .button--alt:hover,
+.actions .button--alt:active {
+  background-color: #1e293b;
+  color: #f9fafb;
 }
 
 .actions .button {
   background-color: #8a2b06;
-  color: white;
+  color: #f9fafb;
+  border: none;
+}
+
+.actions .button:hover,
+.actions .button:active {
+  background-color: #641e03;
+  color: #f9fafb;
+}
+
+.empty-message {
+  text-align: center;
+  color: #1e293b;
+  font-size: 1.1rem;
+  padding: 2rem 0;
+  background: #f9fafb;
+  border-radius: 8px;
 }

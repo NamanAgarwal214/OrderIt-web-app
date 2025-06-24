@@ -19,16 +19,20 @@ const Cart = (props) => {
 
   const cartItems = (
     <ul className={styling["cart-items"]}>
-      {cartCtx.items.map((item) => (
-        <CartItem
-          onRemove={cartItemRemove.bind(null, item.id)}
-          onAdd={cartItemAdd.bind(null, item)}
-          key={item.id}
-          name={item.name}
-          amount={item.amount}
-          price={item.price}
-        />
-      ))}
+      {cartCtx.items.length === 0 ? (
+        <li className={styling["empty-message"]}>Your cart is empty. Start adding some delicious meals!</li>
+      ) : (
+        cartCtx.items.map((item) => (
+          <CartItem
+            onRemove={cartItemRemove.bind(null, item.id)}
+            onAdd={cartItemAdd.bind(null, item)}
+            key={item.id}
+            name={item.name}
+            amount={item.amount}
+            price={item.price}
+          />
+        ))
+      )}
     </ul>
   );
   return (
